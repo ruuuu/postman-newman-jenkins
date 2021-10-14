@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "api-tests-production": "newman run tests/MelittaCollection.postman_collection.json --reporters cli,junit --reporter-junit-export report.xml" 
+    "api-tests-production": "newman run tests/MelittaCollection.postman_collection.json --reporters cli,junit --reporter-junit-export newman/report.xml" 
   },
   "author": "Rufina Davletova",
   "dependencies": {
