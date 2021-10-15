@@ -1,15 +1,16 @@
 {
-  "name": "postman-newman-jenkins",
+  "name": "postman-jenkins",
   "version": "1.0.0",
   "description": "Project for storing Postman tests",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "api-tests-production": "newman run tests/Melitta Collection.postman_collection.json"
+    "api-tests-production": "newman run tests/testCollection.postman_collection.json  --environment tests/testMyEnvironment.postman_environment.json --reporters=cli,junit,html,htmlextra --reporter-htmlextra-export 'newman/result.html' --reporter-junit-export 'newman/report.xml' --reporter-html-export 'newman/report.html'" 
   },
   "author": "Rufina Davletova",
   "dependencies": {
-    "newman": "^5.3.0"
+    "newman": "^5.3.0",
+    "newman-reporter-htmlextra": "^1.22.1"
   }
 }
